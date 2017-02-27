@@ -1,5 +1,18 @@
+$green: #4CAF50;
+$gray: #212121;
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: $gray;
+}
+
+#app {
+  margin: .5em 1em;
+}
+
+#logo {
+  position: relative;
+  right: 8px;
 }

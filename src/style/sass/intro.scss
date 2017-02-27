@@ -1,10 +1,22 @@
+$green: #4CAF50;
+$gray: #212121;
+
 #introContainer {
+  margin-top: 2em;
+  #welcome, #nomad {
+    font-size: 2em;
+    color: $green;
+    font-weight: bold;
+  }
+  #tagline {
+    font-size: 2em;
+  }
   .inspectorIcon-appear {
     opacity: 0.01;
   }
   .inspectorIcon-appear.inspectorIcon-appear-active {
     opacity: 1;
-    transition: opacity .8s ease-in;
+    transition: opacity 1s ease-in;
   }
 }
 

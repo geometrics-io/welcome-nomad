@@ -1,6 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  color: #212121; }
+
+#app {
+  margin: .5em 1em; }
+
+#logo {
+  position: relative;
+  right: 8px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,7 +1,15 @@
-#introContainer .inspectorIcon-appear {
-  opacity: 0.01; }
-#introContainer .inspectorIcon-appear.inspectorIcon-appear-active {
-  opacity: 1;
-  transition: opacity .8s ease-in; }
+#introContainer {
+  margin-top: 2em; }
+  #introContainer #welcome, #introContainer #nomad {
+    font-size: 2em;
+    color: #4CAF50;
+    font-weight: bold; }
+  #introContainer #tagline {
+    font-size: 2em; }
+  #introContainer .inspectorIcon-appear {
+    opacity: 0.01; }
+  #introContainer .inspectorIcon-appear.inspectorIcon-appear-active {
+    opacity: 1;
+    transition: opacity 1s ease-in; }
 
 /*# sourceMappingURL=intro.css.map */
