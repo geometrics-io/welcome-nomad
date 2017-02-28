@@ -1,7 +1,15 @@
 import React from 'react';
 import DatePicker from 'material-ui/DatePicker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { green500 } from 'material-ui/styles/colors';
+
+const muiTheme = getMuiTheme({
+    palette: {
+        primary1Color: green500,
+        primary2Color: green500,
+    },
+});
 
 export default class DatePick extends React.Component {
     constructor(props) {
@@ -37,16 +45,16 @@ export default class DatePick extends React.Component {
     render() {
         return (
             <div>
-                <MuiThemeProvider>
+                <MuiThemeProvider muiTheme={muiTheme}>
                     <DatePicker
                         onChange={this.handleChangeMinDate}
                         autoOk={this.state.autoOk}
                         floatingLabelText="Arrival"
                         disableYearSelection={this.state.disableYearSelection}
-                        dialogContainerStyle={{color: green500}}
+                        dialogContainerStyle={{div: green500}}
                     />
                 </MuiThemeProvider>
-                <MuiThemeProvider>
+                <MuiThemeProvider muiTheme={muiTheme}>
                     <DatePicker
                         onChange={this.handleChangeMaxDate}
                         autoOk={this.state.autoOk}
