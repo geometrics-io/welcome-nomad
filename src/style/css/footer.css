@@ -1,0 +1,17 @@
+#footerContainer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0; }
+  #footerContainer .footerItem img {
+    position: relative;
+    top: 2em; }
+  #footerContainer .footerItem p {
+    margin-top: 0;
+    text-align: center; }
+    #footerContainer .footerItem p a {
+      text-decoration: none;
+      color: #4CAF50; }
+
+/*# sourceMappingURL=footer.css.map */

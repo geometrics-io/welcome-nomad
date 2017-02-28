@@ -1,0 +1,25 @@
+$green: #4CAF50;
+$gray: #212121;
+
+#footerContainer {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  .footerItem {
+    img {
+      position: relative;
+      top: 2em;
+    }
+    p{
+      margin-top: 0;
+      text-align: center;
+      a {
+        text-decoration: none;
+        color: $green;
+      }
+
+    }
+  }
+}
