@@ -2,14 +2,14 @@ $green: #4CAF50;
 $gray: #212121;
 
 #introContainer {
-  margin-top: 2em;
-  #welcome, #nomad {
-    font-size: 2em;
+  margin: 2em 0 3em 0;
+  #title {
+    font-size: 3em;
     color: $green;
     font-weight: bold;
   }
   #tagline {
-    font-size: 2em;
+    font-size: 3em;
   }
   .inspectorIcon-appear {
     opacity: 0.01;
