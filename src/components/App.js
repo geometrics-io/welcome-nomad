@@ -3,6 +3,7 @@ import Header from './Header';
 import Intro from './Intro';
 import Form from './Form';
 import DatePick from './DatePicker';
+import Origin from './Origin';
 import Footer from './Footer';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
                 <Intro />
                 <Form />
                 <DatePick />
+                <Origin />
                 <Footer />
             </div>
         );

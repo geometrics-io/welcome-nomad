@@ -1,0 +1,12 @@
+$green: #4CAF50;
+$gray: #212121;
+
+#origin {
+  font-size: 1.75em;
+  .clickable {
+    color: $green;
+  }
+  .link {
+    text-decoration: none;
+  }
+}
