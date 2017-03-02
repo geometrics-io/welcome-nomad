@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Intro from './Intro';
-import Form from './Form';
+import TravelForm from './Form';
 import DatePick from './DatePicker';
 import Origin from './Origin';
 import Footer from './Footer';
@@ -12,7 +12,7 @@ class App extends Component {
             <div id="app">
                 <Header />
                 <Intro />
-                <Form />
+                <TravelForm />
                 <DatePick />
                 <Origin />
                 <Footer />
