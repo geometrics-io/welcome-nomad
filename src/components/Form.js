@@ -1,30 +1,43 @@
 import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 let injectTapEventPlugin = require("react-tap-event-plugin")
-import { green500 } from 'material-ui/styles/colors';
 import { Field, reduxForm } from 'redux-form'
-import { TextField } from 'redux-form-material-ui'
+import RaisedButton from 'material-ui/RaisedButton';
+import { TextField, DatePicker } from 'redux-form-material-ui'
 import '../style/css/form.css';
-
 injectTapEventPlugin()
 
-const TravelForm = (props) => (
-    <div>
-        <MuiThemeProvider>
-            <form action="">
+const required = value => value == null ? 'Required' : undefined
+
+class Form extends React.Component {
+    componentDidMount() {
+        this.refs.country           // the Field
+            .getRenderedComponent() // on Field, returns ReduxFormMaterialUITextField
+            .getRenderedComponent() // on ReduxFormMaterialUITextField, returns TextField
+    }
+
+    render() {
+        const {handleSubmit, pristine, reset, submitting} = this.props
+        return (
+            <form onSubmit={handleSubmit}>
                 <Field
                     name="country"
                     component={TextField}
+                    type="text"
                     floatingLabelText="Where are you traveling to?"
                     hintText="Country"
-                    underlineFocusStyle={{borderColor: green500}}
-                    floatingLabelShrinkStyle={{color: green500}}
+                    validate={required}
+                    ref="country" withRef
                 />
+                <Field name="arrival" component={DatePicker} format={null} hintText="Arrival" validate={required} onChange={(value) => {
+                    console.log(value);
+                }}/>
+                <Field name="departure" component={DatePicker} format={null} hintText="Departure" validate={required} />
+                <RaisedButton label="Submit" disabled={pristine || submitting} onClick={reset} style={{marginTop: 16}}/>
             </form>
-        </MuiThemeProvider>
-    </div>
-);
+        )
+    }
+}
 
 export default reduxForm({
-    form: 'travel-form'  // a unique identifier for this form
-})(TravelForm)
+    form: 'travel-form',
+})(Form)
